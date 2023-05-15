@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Ny Pakke</title>
+  <script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</head>
+<body>
+<h2>Register ny pakke</h2>
+<table>
+  <tr>
+    <td>LID</td>
+    <td><input type="number" id="lid" onchange="validerLid(this.value)"></td>
+    <td><span id="feilLid"></span> </td>
+  </tr>
+  <tr>
+    <td>Eier</td>
+    <td><input type="text" id="eier" onchange="validerEier(this.value)"></td>
+    <td><span id="feilEier"></span> </td>
+  </tr>
+  <tr>
+    <td>Vekt</td>
+    <td><input type="number" id="vekt" onchange="validerVekt(this.value)"></td>
+    <td><span id="feilVekt"></span> </td>
+  </tr>
+  <tr>
+    <td>Volum</td>
+    <td><input type="number" id="volum" onchange="validerVolum(this.value)"></td>
+    <td><span id="feilVolum"></span> </td>
+  </tr>
+  <tr>
+    <td><button id="register" onclick="registrerPakke()">Registrer</button></td>
+  </tr>
+</table>
+<div id="melding"></div>
+<br>
+<br>
+<div id="pakkeliste"></div>
+</body>
+</html>
